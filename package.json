@@ -1,0 +1,23 @@
+{
+  "name": "advanced-web-upload1",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Upload 1 - Accessibility-first scaffolding with evidence pack",
+  "scripts": {
+    "dev": "http-server public -p 5173 -c-1",
+    "lint:html": "htmlhint \"public/**/*.html\"",
+    "lint:css": "stylelint \"public/css/**/*.css\"",
+    "lint": "npm run lint:html && npm run lint:css",
+    "evidence:lighthouse": "lighthouse http://localhost:5173 --only-categories=accessibility --output html --output-path=./evidence/lighthouse-accessibility.html --quiet --chrome-flags='--headless=new'",
+    "evidence:note": "node -e \"console.log('Start dev server (npm run dev) or docker compose up, then run: npm run evidence:lighthouse');\""
+  },
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "http-server": "^14.1.1",
+    "lighthouse": "^12.2.0",
+    "stylelint": "^16.9.0",
+    "stylelint-config-recommended": "^14.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-order": "^6.0.3"
+  }
+}

@@ -1,0 +1,62 @@
+:root {
+  /* Colors */
+  --color-bg: #ffffff;
+  --color-surface: #f7f7fb;
+  --color-text: #111827; /* near-black */
+  --color-muted: #4b5563; /* gray 600 */
+  --color-border: #d1d5db; /* gray 300 */
+  --color-primary: #1e40af; /* indigo 800 */
+  --color-primary-contrast: #ffffff;
+  --color-focus: #0b5fff; /* strong blue focus indicator */
+  --color-button-bg: var(--color-primary);
+  --color-button-text: var(--color-primary-contrast);
+  --color-button-bg-secondary: #e5e7eb; /* gray 200 */
+  --color-button-text-secondary: #111827;
+
+  /* Spacing scale */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  /* Radii */
+  --radius-1: 0.25rem;
+  --radius-2: 0.5rem;
+  --radius-round: 999px;
+
+  /* Typography */
+  --font-body: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --fs-300: 0.875rem;
+  --fs-400: 1rem;
+  --fs-500: 1.125rem;
+  --fs-600: 1.25rem;
+  --fs-700: 1.5rem;
+  --fs-800: 2rem;
+
+  /* Layout */
+  --max-w: 72rem; /* 1152px */
+}
+
+/* Breakpoints */
+@media (min-width: 480px) {
+  :root {
+    --fs-800: 2.25rem;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --fs-800: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --fs-800: 2.75rem;
+  }
+}

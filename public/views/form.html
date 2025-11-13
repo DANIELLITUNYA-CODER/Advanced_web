@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Accessible Starter – Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href="../css/tokens.css" as="style" />
+    <link rel="stylesheet" href="../css/tokens.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <script defer src="../js/a11y.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header" role="banner">
+      <div class="wrap">
+        <a class="brand" href="../index.html">Accessible Starter</a>
+        <nav aria-label="Primary" class="site-nav">
+          <ul class="nav-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./data.html">Data</a></li>
+            <li><a href="./form.html" aria-current="page">Form</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <div class="wrap">
+        <h1>Contact us</h1>
+
+        <form class="form" action="#" method="post" novalidate>
+          <fieldset>
+            <legend>Your details</legend>
+
+            <div class="form-group">
+              <label for="name">Name <span class="required" aria-hidden="true">*</span></label>
+              <div id="name-help" class="help">Enter your full name.</div>
+              <input id="name" name="name" type="text" required aria-describedby="name-help" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email <span class="required" aria-hidden="true">*</span></label>
+              <div id="email-help" class="help">We’ll only use it to reply.</div>
+              <input id="email" name="email" type="email" required aria-describedby="email-help" />
+            </div>
+
+            <div class="form-group">
+              <label for="topic">Topic</label>
+              <div class="help" id="topic-help">Choose the most relevant topic.</div>
+              <select id="topic" name="topic" aria-describedby="topic-help">
+                <option value="">Please select</option>
+                <option value="general">General</option>
+                <option value="support">Support</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message <span class="required" aria-hidden="true">*</span></label>
+              <div id="message-help" class="help">Be as descriptive as possible.</div>
+              <textarea id="message" name="message" rows="6" required aria-describedby="message-help"></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button class="button" type="submit">Send</button>
+              <button class="button secondary" type="reset">Reset</button>
+            </div>
+
+            <p class="muted"><span class="required" aria-hidden="true">*</span> Required fields</p>
+          </fieldset>
+        </form>
+
+        <aside aria-labelledby="kb-title" class="sidebar">
+          <h2 id="kb-title">Keyboard-operable example</h2>
+          <details>
+            <summary>Form tips</summary>
+            <ul>
+              <li>Labels are associated with inputs via the <code>for</code> attribute.</li>
+              <li>Helper text uses <code>aria-describedby</code>.</li>
+              <li>Only necessary ARIA is used (e.g., <code>aria-current</code> in nav).</li>
+            </ul>
+          </details>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="wrap">
+        <p>&copy; <span id="year"></span> Accessible Starter</p>
+      </div>
+      <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
+</html>

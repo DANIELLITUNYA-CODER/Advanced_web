@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="768" role="img" aria-labelledby="title desc">
+  <title id="title">Form wireframe (landmarks + tab order)</title>
+  <desc id="desc">Low-fidelity wireframe for Form showing landmarks and tab order annotations.</desc>
+  <style>
+    .box { fill: #ffffff; stroke: #111827; stroke-width: 2; }
+    .soft { fill: #f7f7fb; stroke: #d1d5db; }
+    .label { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; font-size: 18px; fill: #111827; }
+    .badge { fill: #0b5fff; stroke: none; }
+    .badge-text { fill: #fff; font-size: 14px; font-weight: 700; }
+  </style>
+
+  <!-- Header and Nav -->
+  <rect class="box" x="40" y="40" width="944" height="80" />
+  <text class="label" x="52" y="74">header</text>
+  <rect class="soft" x="40" y="120" width="944" height="56" />
+  <text class="label" x="52" y="154">nav (Primary)</text>
+
+  <!-- Main with form -->
+  <rect class="box" x="40" y="196" width="640" height="452" />
+  <text class="label" x="52" y="230">main (Form)</text>
+  <text class="label" x="52" y="260">Tab order: Name → Email → Topic → Message → Submit → Reset</text>
+
+  <!-- Aside -->
+  <rect class="soft" x="700" y="196" width="284" height="452" />
+  <text class="label" x="712" y="230">aside (Form tips, disclosure)</text>
+
+  <!-- Footer -->
+  <rect class="box" x="40" y="660" width="944" height="68" />
+  <text class="label" x="52" y="700">footer</text>
+</svg>
