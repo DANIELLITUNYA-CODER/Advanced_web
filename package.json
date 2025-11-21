@@ -8,16 +8,20 @@
     "lint:html": "htmlhint \"public/**/*.html\"",
     "lint:css": "stylelint \"public/css/**/*.css\"",
     "lint": "npm run lint:html && npm run lint:css",
+    "test": "vitest",
+    "test:ci": "vitest run --coverage",
     "evidence:lighthouse": "lighthouse http://localhost:5173 --only-categories=accessibility --output html --output-path=./evidence/lighthouse-accessibility.html --quiet --chrome-flags='--headless=new'",
     "evidence:note": "node -e \"console.log('Start dev server (npm run dev) or docker compose up, then run: npm run evidence:lighthouse');\""
   },
   "devDependencies": {
+    "@vitest/coverage-v8": "^2.1.8",
     "htmlhint": "^1.1.4",
     "http-server": "^14.1.1",
     "lighthouse": "^12.2.0",
     "stylelint": "^16.9.0",
     "stylelint-config-recommended": "^14.0.0",
     "stylelint-config-standard": "^36.0.0",
-    "stylelint-order": "^6.0.3"
+    "stylelint-order": "^6.0.3",
+    "vitest": "^2.1.8"
   }
 }

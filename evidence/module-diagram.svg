@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <style>
+      .module-box { fill: #fff; stroke: #333; stroke-width: 2; }
+      .utils { fill: #e1f5fe; stroke: #01579b; }
+      .state { fill: #f3e5f5; stroke: #4a148c; }
+      .models { fill: #e8f5e9; stroke: #1b5e20; }
+      .ui { fill: #fff3e0; stroke: #e65100; }
+      .router { fill: #fce4ec; stroke: #880e4f; }
+      .text { font-family: Arial, sans-serif; font-size: 12px; text-anchor: middle; }
+      .title { font-size: 16px; font-weight: bold; }
+      .arrow { stroke: #666; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="30" class="text title">Module Architecture - Upload 2</text>
+  
+  <!-- Legend -->
+  <rect x="20" y="50" width="80" height="20" class="module-box utils"/>
+  <text x="60" y="64" class="text">Utilities</text>
+  
+  <rect x="110" y="50" width="80" height="20" class="module-box state"/>
+  <text x="150" y="64" class="text">State</text>
+  
+  <rect x="200" y="50" width="80" height="20" class="module-box models"/>
+  <text x="240" y="64" class="text">Models</text>
+  
+  <rect x="290" y="50" width="80" height="20" class="module-box ui"/>
+  <text x="330" y="64" class="text">UI</text>
+  
+  <rect x="380" y="50" width="80" height="20" class="module-box router"/>
+  <text x="420" y="64" class="text">Router</text>
+  
+  <!-- Bootstrap (Entry Point) -->
+  <rect x="350" y="100" width="100" height="40" class="module-box" fill="#ffe0b2" stroke="#e65100"/>
+  <text x="400" y="125" class="text">bootstrap.js</text>
+  
+  <!-- Core Layer -->
+  <g id="core-layer">
+    <!-- Store -->
+    <rect x="350" y="180" width="100" height="40" class="module-box state"/>
+    <text x="400" y="205" class="text">Store</text>
+    
+    <!-- Router -->
+    <rect x="350" y="260" width="100" height="40" class="module-box router"/>
+    <text x="400" y="285" class="text">Router</text>
+  </g>
+  
+  <!-- Supporting Modules -->
+  <g id="support-modules">
+    <!-- Utilities -->
+    <rect x="50" y="180" width="80" height="30" class="module-box utils"/>
+    <text x="90" y="200" class="text">PubSub</text>
+    
+    <rect x="50" y="220" width="80" height="30" class="module-box utils"/>
+    <text x="90" y="240" class="text">DeepFreeze</text>
+    
+    <!-- Reducers -->
+    <rect x="150" y="180" width="80" height="30" class="module-box state"/>
+    <text x="190" y="200" class="text">formReducer</text>
+    
+    <rect x="150" y="220" width="80" height="30" class="module-box state"/>
+    <text x="190" y="240" class="text">dataReducer</text>
+    
+    <!-- Actions -->
+    <rect x="150" y="260" width="80" height="30" class="module-box state"/>
+    <text x="190" y="280" class="text">Actions</text>
+    
+    <!-- Selectors -->
+    <rect x="150" y="300" width="80" height="30" class="module-box state"/>
+    <text x="190" y="320" class="text">Selectors</text>
+    
+    <!-- Route Table -->
+    <rect x="250" y="260" width="80" height="30" class="module-box router"/>
+    <text x="290" y="280" class="text">RouteTable</text>
+    
+    <!-- View Factory -->
+    <rect x="520" y="260" width="80" height="30" class="module-box ui"/>
+    <text x="560" y="280" class="text">ViewFactory</text>
+  </g>
+  
+  <!-- Views -->
+  <g id="views">
+    <rect x="520" y="320" width="80" height="30" class="module-box ui"/>
+    <text x="560" y="340" class="text">HomeView</text>
+    
+    <rect x="610" y="320" width="80" height="30" class="module-box ui"/>
+    <text x="650" y="340" class="text">DataView</text>
+    
+    <rect x="700" y="320" width="80" height="30" class="module-box ui"/>
+    <text x="740" y="340" class="text">FormView</text>
+  </g>
+  
+  <!-- Models -->
+  <g id="models">
+    <rect x="610" y="380" width="80" height="30" class="module-box models"/>
+    <text x="650" y="400" class="text">Validation</text>
+    
+    <rect x="700" y="380" width="80" height="30" class="module-box models"/>
+    <text x="740" y="400" class="text">Transform</text>
+    
+    <rect x="520" y="380" width="80" height="30" class="module-box models"/>
+    <text x="560" y="400" class="text">API Service</text>
+  </g>
+  
+  <!-- View Base -->
+  <rect x="610" y="440" width="80" height="30" class="module-box ui"/>
+  <text x="650" y="460" class="text">View (Base)</text>
+  
+  <!-- Arrows (Key Dependencies) -->
+  <!-- Bootstrap to Store and Router -->
+  <path d="M 400 140 L 400 180" class="arrow"/>
+  <path d="M 400 140 L 400 260" class="arrow"/>
+  
+  <!-- Store to Utilities -->
+  <path d="M 350 200 L 130 195" class="arrow"/>
+  <path d="M 350 205 L 130 235" class="arrow"/>
+  
+  <!-- Store to Reducers -->
+  <path d="M 350 195 L 230 195" class="arrow"/>
+  <path d="M 350 200 L 230 235" class="arrow"/>
+  
+  <!-- Router to RouteTable and ViewFactory -->
+  <path d="M 350 280 L 330 280" class="arrow"/>
+  <path d="M 450 280 L 520 280" class="arrow"/>
+  
+  <!-- ViewFactory to Views -->
+  <path d="M 560 290 L 560 320" class="arrow"/>
+  <path d="M 560 290 L 650 320" class="arrow"/>
+  <path d="M 560 290 L 740 320" class="arrow"/>
+  
+  <!-- Views to Models -->
+  <path d="M 650 350 L 650 380" class="arrow"/>
+  <path d="M 740 350 L 740 380" class="arrow"/>
+  <path d="M 650 350 L 560 380" class="arrow"/>
+  
+  <!-- Views to View Base -->
+  <path d="M 560 350 L 610 440" class="arrow"/>
+  <path d="M 650 350 L 650 440" class="arrow"/>
+  <path d="M 740 350 L 690 440" class="arrow"/>
+  
+  <!-- Info Box -->
+  <rect x="20" y="480" width="760" height="100" fill="#f5f5f5" stroke="#999" stroke-width="1" rx="5"/>
+  <text x="30" y="500" class="text" text-anchor="start" font-weight="bold">Key Architectural Principles:</text>
+  <text x="40" y="520" class="text" text-anchor="start" font-size="11">• Unidirectional data flow: Actions → Reducers → Store → Views</text>
+  <text x="40" y="535" class="text" text-anchor="start" font-size="11">• Pure functions in models/ enable comprehensive testing (45 unit tests)</text>
+  <text x="40" y="550" class="text" text-anchor="start" font-size="11">• Immutable state via deepFreeze utility</text>
+  <text x="40" y="565" class="text" text-anchor="start" font-size="11">• Hash-based routing with View lifecycle (mount/unmount)</text>
+</svg>

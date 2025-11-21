@@ -1,0 +1,55 @@
+
+> advanced-web-upload1@0.1.0 test:ci
+> vitest run --coverage
+
+
+[1m[7m[36m RUN [39m[27m[22m [36mv2.1.9 [39m[90m/home/runner/work/Advanced_web/Advanced_web[39m
+      [2mCoverage enabled with [22m[33mv8[39m
+
+ [32m✓[39m tests/unit/transform.test.js [2m([22m[2m12 tests[22m[2m)[22m[90m 8[2mms[22m[39m
+ [32m✓[39m tests/unit/validation.test.js [2m([22m[2m16 tests[22m[2m)[22m[90m 9[2mms[22m[39m
+ [32m✓[39m tests/unit/reducers.test.js [2m([22m[2m10 tests[22m[2m)[22m[90m 7[2mms[22m[39m
+ [32m✓[39m tests/unit/selectors.test.js [2m([22m[2m7 tests[22m[2m)[22m[90m 5[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m4 passed[39m[22m[90m (4)[39m
+[2m      Tests [22m [1m[32m45 passed[39m[22m[90m (45)[39m
+[2m   Start at [22m 20:09:39
+[2m   Duration [22m 882ms[2m (transform 80ms, setup 0ms, collect 149ms, tests 29ms, environment 1ms, prepare 364ms)[22m
+
+[34m % [39m[2mCoverage report from [22m[33mv8[39m
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   22.84 |    77.19 |   46.87 |   22.84 |                   
+ public/js         |       0 |        0 |       0 |       0 |                   
+  a11y.js          |       0 |        0 |       0 |       0 | 1-32              
+ src               |       0 |        0 |       0 |       0 |                   
+  bootstrap.js     |       0 |        0 |       0 |       0 | 1-37              
+ src/models        |     100 |      100 |     100 |     100 |                   
+  transform.js     |     100 |      100 |     100 |     100 |                   
+  validation.js    |     100 |      100 |     100 |     100 |                   
+ src/router        |       0 |        0 |       0 |       0 |                   
+  index.js         |       0 |        0 |       0 |       0 | 1-64              
+  route-table.js   |       0 |        0 |       0 |       0 | 1-21              
+ src/services      |       0 |        0 |       0 |       0 |                   
+  api.js           |       0 |        0 |       0 |       0 | 1-51              
+ src/state         |    24.8 |        0 |       0 |    24.8 |                   
+  actions.js       |   63.26 |      100 |       0 |   63.26 | ...32,40-44,51-54 
+  store.js         |       0 |        0 |       0 |       0 | 1-89              
+ ...state/reducers |     100 |      100 |     100 |     100 |                   
+  dataReducer.js   |     100 |      100 |     100 |     100 |                   
+  formReducer.js   |     100 |      100 |     100 |     100 |                   
+ ...tate/selectors |     100 |      100 |     100 |     100 |                   
+  dataSelectors.js |     100 |      100 |     100 |     100 |                   
+  formSelectors.js |     100 |      100 |     100 |     100 |                   
+ src/ui            |       0 |        0 |       0 |       0 |                   
+  View.js          |       0 |        0 |       0 |       0 | 1-70              
+  viewFactory.js   |       0 |        0 |       0 |       0 | 1-60              
+ src/ui/views      |       0 |        0 |       0 |       0 |                   
+  DataView.js      |       0 |        0 |       0 |       0 | 1-121             
+  FormView.js      |       0 |        0 |       0 |       0 | 1-226             
+  HomeView.js      |       0 |        0 |       0 |       0 | 1-58              
+ src/utils         |       0 |        0 |       0 |       0 |                   
+  deepFreeze.js    |       0 |        0 |       0 |       0 | 1-28              
+  pubsub.js        |       0 |        0 |       0 |       0 | 1-52              
+-------------------|---------|----------|---------|---------|-------------------
